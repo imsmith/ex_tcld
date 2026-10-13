@@ -27,7 +27,7 @@ defmodule ExTcld.MixProject do
     [
       licenses: ["AGPL-3.0-only"],
       links: %{"GitHub" => "https://github.com/imsmith/ex_tcld"},
-      files: ~w(lib mix.exs mix.lock README.md LICENSE .formatter.exs)
+      files: ~w(lib priv mix.exs mix.lock README.md LICENSE .formatter.exs)
     ]
   end
 

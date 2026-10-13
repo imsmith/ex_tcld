@@ -129,13 +129,16 @@ module docs runs as a doctest.
 
 ## Installation
 
-Requires Elixir 1.20 or later.
+Requires Elixir 1.20 or later. Not yet published to Hex; depend on the tag:
 
 ```elixir
 def deps do
-  [{:ex_tcld, "~> 0.1"}]
+  [{:ex_tcld, github: "imsmith/ex_tcld", tag: "v0.1.0"}]
 end
 ```
+
+The Tcl-side emitter, `priv/tcl/tcld.tcl`, ships with the package. Source it
+from a Tcl script to write documents this library reads.
 
 ## License
 

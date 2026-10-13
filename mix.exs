@@ -37,6 +37,7 @@ defmodule ExTcld.MixProject do
   # combinator through depth tracking. Shipping an unused dep would be worse.
   defp deps do
     [
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.34", only: :dev, runtime: false},
       {:stream_data, "~> 1.1", only: [:dev, :test]}
     ]

@@ -141,11 +141,11 @@ defmodule ExTcld.Parser.Lexer do
 
   # --- bare ---------------------------------------------------------------
 
+  # A bare word ends at whitespace or end of input and has no failure mode, so
+  # take_bare/3 always succeeds.
   defp scan_bare(source, limits) do
-    case take_bare(source, [], limits) do
-      {:ok, content, rest} -> {:ok, Value.new(content, :bare, consumed(source, rest)), rest}
-      {:error, %Diagnostic{}} = error -> error
-    end
+    {:ok, content, rest} = take_bare(source, [], limits)
+    {:ok, Value.new(content, :bare, consumed(source, rest)), rest}
   end
 
   # The slice of `source` that was consumed to produce `rest`. Retained so that
